@@ -1,9 +1,10 @@
 import scrapy
 from scrapy.crawler import CrawlerProcess
-from spiders.quotes_spider import QuotesSpider
+
+from spiders.news_spider import NewsSpider
 process = CrawlerProcess({
     'USER_AGENT': 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1)'
 })
 
-process.crawl(QuotesSpider)
+process.crawl(NewsSpider)
 process.start() # the script will block here until the crawling is finished

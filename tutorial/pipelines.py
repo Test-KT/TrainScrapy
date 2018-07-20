@@ -15,13 +15,13 @@ class TutorialPipeline(object):
 
 class JsonWritePipeline(object):
     def __init__(self):
-        self.file = open('author.json', 'w')
+        self.file = open('news.json', 'w')
 
     def process_item(self, item, spider):
         line = json.dumps(dict(item))+'\n'
         self.file.write(line)
         return item
-
+   
 
 class MongoDbPipeline(object):
     collection_name = 'demo'

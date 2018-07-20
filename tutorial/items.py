@@ -25,3 +25,10 @@ class AuthorItem(scrapy.Item):
     name=scrapy.Field()
     date=scrapy.Field()
     desc=scrapy.Field()
+
+
+class NewsItem(scrapy.Item):
+    title=scrapy.Field()
+    info=scrapy.Field()
+    time=scrapy.Field()
+    post_user=scrapy.Field()
