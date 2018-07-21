@@ -1,0 +1,4 @@
+/.vscode
+.DS_Store
+/tutorial/__pycache__
+/tutorial/spiders/__pycache__
