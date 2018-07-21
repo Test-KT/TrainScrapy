@@ -11,8 +11,8 @@ class NewsSpider(scrapy.Spider):
         # news_href_list=res.xpath('//ul[@class="news-list"]/li/div[2]/h3/a/@href')
         # for herf in news_href_list:
         #     url=res.urljoin(herf.extract())
-            self.logger.debug(url)
-        items=[]
+            # self.logger.debug(url)
+        datas=[]
         newbox=res.css("ul.news-list")
         for item in newbox.css('li'):
             it=NewsItem()
@@ -24,11 +24,11 @@ class NewsSpider(scrapy.Spider):
             it['info']=info
             it['time']=time
             it['post_user']=post_user
-            items.append(it)
+            datas.append(it)
 
             yield it
 
-        return items
+        return datas
     
 
 

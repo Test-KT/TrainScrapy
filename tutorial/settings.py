@@ -49,9 +49,10 @@ ROBOTSTXT_OBEY = False
 
 # Enable or disable spider middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
-# SPIDER_MIDDLEWARES = {
-#    'tutorial.middlewares.TutorialSpiderMiddleware': 543,
-# }
+# 模拟点击
+SPIDER_MIDDLEWARES = {
+   'tutorial.middlewares.SeleniumMiddleware': 543,
+}
 
 # Enable or disable downloader middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
